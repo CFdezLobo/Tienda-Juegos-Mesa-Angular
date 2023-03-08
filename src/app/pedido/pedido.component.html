@@ -1,0 +1,104 @@
+<h4 style="text-align:center;margin-top:3rem;">Rellena los datos del pedido:</h4>
+
+<div style="display:flex;justify-content:center;margin-top:3rem;">
+	<form id="form_registro_usuario" method="post" class="row g-3" style="width:50%;text-align: start;">
+        <div class="col-md-6">
+			<label for="inputNombre" class="form-label">Nombre Completo</label> 
+			<input type="text" class="form-control" [(ngModel)]="pedido.nombre" name="nombreCompleto" id="nombre">
+			<span [hidden]="nombreOk" style="color: red;">Error en el nombre</span>
+		</div>
+		<div class="col-md-6">
+			<label for="inputEmail" class="form-label">Email</label> 
+			<input type="email" class="form-control" [(ngModel)]="pedido.email" name="email" id="email">
+			<span [hidden]="emailOk" style="color: red;">Error en el email</span>
+		</div>
+		<div class="col-md-6">
+			<label for="inputDNI" class="form-label">DNI</label> 
+			<input type="text" class="form-control" [(ngModel)]="pedido.dni" name="dni" id="dni">
+            <span [hidden]="dniOk" style="color: red;">Error en el DNI</span>
+		</div>
+		<div class="col-md-6">
+			<label for="inputTarjeta" class="form-label">Nº Tarjeta:</label> 
+			<input type="text" class="form-control" [(ngModel)]="pedido.tarjeta" name="tarjeta" id="tarjeta">
+			<span [hidden]="nTarjetaOk" style="color: red;">Error en la Tarjeta</span>
+		</div>
+		<div class="col-md-6">
+			<label for="inputDireccion" class="form-label">Direccion</label> 
+			<input type="text" class="form-control"  [(ngModel)]="pedido.direccion" name="direccion" id="direccion">
+            <span [hidden]="dniOk" style="color: red;">Error en la Dirección</span>
+		</div>
+		<div class="col-md-4">
+			<label for="inputProvincia" class="form-label">Provincia</label> 
+            <select class="form-select" name="provincia" id="campo_provincia" [(ngModel)]="pedido.provincia">
+                <option selected>Seleccione una provincia</option>
+                <option value="Álava">Álava</option>
+                <option value="Albacete">Albacete</option>
+                <option value="Alicante">Alicante</option>
+                <option value="Almería">Almería</option>
+                <option value="Asturias">Asturias</option>
+                <option value="Ávila">Ávila</option>
+                <option value="Badajoz">Badajoz</option>
+                <option value="Baleares">Baleares</option>
+                <option value="Barcelona">Barcelona</option>
+                <option value="Burgos">Burgos</option>
+                <option value="Cáceres">Cáceres</option>
+                <option value="Cádiz">Cádiz</option>
+                <option value="Cantabria">Cantabria</option>
+                <option value="Castellón">Castellón</option>
+                <option value="Ceuta">Ceuta</option>
+                <option value="Ciudad Real">Ciudad Real</option>
+                <option value="Córdoba">Córdoba</option>
+                <option value="Cuenca">Cuenca</option>
+                <option value="Girona">Girona</option>
+                <option value="Granada">Granada</option>
+                <option value="Guadalajara">Guadalajara</option>
+                <option value="Guipúzcoa">Guipúzcoa</option>
+                <option value="Huelva">Huelva</option>
+                <option value="Huesca">Huesca</option>
+                <option value="Jaén">Jaén</option>
+                <option value="A Coruña">A Coruña</option>
+                <option value="La Rioja">La Rioja</option>
+                <option value="Las Palmas">Las Palmas</option>
+                <option value="León">León</option>
+                <option value="Lleida">Lleida</option>
+                <option value="Lugo">Lugo</option>
+                <option value="Madrid">Madrid</option>
+                <option value="Málaga">Málaga</option>
+                <option value="Melilla">Melilla</option>
+                <option value="Murcia">Murcia</option>
+                <option value="Navarra">Navarra</option>
+                <option value="Orense">Orense</option>
+                <option value="Palencia">Palencia</option>
+                <option value="Pontevedra">Pontevedra</option>
+                <option value="Salamanca">Salamanca</option>
+                <option value="Segovia">Segovia</option>
+                <option value="Sevilla">Sevilla</option>
+                <option value="Soria">Soria</option>
+                <option value="Tarragona">Tarragona</option>
+                <option value="Tenerife">Tenerife</option>
+                <option value="Teruel">Teruel</option>
+                <option value="Toledo">Toledo</option>
+                <option value="Valencia">Valencia</option>
+                <option value="Valladolid">Valladolid</option>
+                <option value="Vizcaya">Vizcaya</option>
+                <option value="Zamora">Zamora</option>
+                <option value="Zaragoza">Zaragoza</option>
+            </select> 
+			<span [hidden]="provinciaOk" style="color: red;">Error en la Provincia</span>
+		</div>
+		<div class="col-md-2">
+			<label for="inputCp" class="form-label">Código Postal</label> 
+			<input type="text" class="form-control" [(ngModel)]="pedido.cp" name="cp" id="cp">
+			<span [hidden]="cpOk" style="color: red;">Error en la Código Postal</span>
+		</div>
+		<div class="col-12" style="display: flex;justify-content: space-around;margin-top: 3rem;">
+	
+			<a href="#" class="btn btn-primary" style="width:30%; font-size: 1.1rem;">VOLVER</a>
+            <button (click)="finalizarPedido()" class="btn btn-primary" style="width:30%; font-size: 1.1rem;">FINALIZAR PEDIDO</button>
+		</div>
+	</form>
+</div>
+
+
+
+

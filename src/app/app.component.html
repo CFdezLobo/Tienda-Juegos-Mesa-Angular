@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="imagenes/icono.png" sizes="32x32">
+	<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <title>GAMETOPIA</title>
+</head>
+
+  <header>
+		<nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+		  <div class="container-fluid">
+		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    
+		      <a class="navbar-brand" href="#" style="margin-left: 2rem;max-width: 10%;">
+		    	<img style="width:100%;" src="../assets/imagenes/logo.png"/>
+		      </a>  
+			  
+			  <div style="display: flex; align-items: center;">
+				<a href="#" routerLink="/listado" style="color:white; margin-right: 1rem;">PRODUCTOS</a>
+				<a href="#" routerLink="/carrito" style="color:white; margin-right: 1rem;">CARRITO</a> 
+				<a href="http://localhost/tienda_angular/admin/" style="color:white; margin-right: 1rem;">ADMINISTRACIÓN</a>
+			  </div>
+		      
+		      <div id="contenedorIconos" style="display:flex;">
+		      	<div class="dropdown" style="margin-right: 2rem;">
+              <a href="http://localhost/tienda_angular/admin/"> <i id="iconoUsuario" class="bi bi-person-circle" data-bs-toggle="dropdown"></i></a>
+			      </div>
+			  
+            <div class="dropdown">
+                <i id="carrito" class="bi bi-cart-fill" data-bs-toggle="dropdown" routerLink="/carrito"></i>
+            </div>
+
+		      </div>
+			  
+		      <div style="margin:10px;">
+				    <a href="?lang=es"> <img id="imagen_bandera" src="../assets/imagenes/espana.png"/> </a>
+				    <a href="?lang=en"> <img id="imagen_bandera" src="../assets/imagenes/reino_unido.png"/> </a>
+				    <a href="?lang=ge"> <img id="imagen_bandera" src="../assets/imagenes/alemania.png"/> </a>
+			    </div>
+		    </div>
+		  </div>
+		</nav>
+	
+	</header>
+
+  <body>
+    
+  </body>
+
+  <br>
+  <br>
+
+  <router-outlet></router-outlet>
+
+  <div id="contenedorFooter" style="bottom:0; position:static; display:block;">
+	  <footer class="py-5 container">
+	    <div class="row">
+	      <div class="col-6 col-md-2 mb-3">
+	        <h5 style="text-align:center;">Contacto</h5>
+	        <ul class="nav flex-column">
+	          <li id="listaContacto" class="nav-item mb-2"><i class="bi bi-telephone-fill"></i><a href="#" class="nav-link p-0 text-muted">+34 612345789</a></li>
+	          <li id="listaContacto" class="nav-item mb-2"><i class="bi bi-envelope-fill"></i><a href="#" class="nav-link p-0 text-muted">info@gametopia.com</a></li>
+	          <li id="listaContacto" class="nav-item mb-2"><i class="bi bi-signpost-fill"></i><a href="#" class="nav-link p-0 text-muted">C/Donoso Cortés, 61</a></li>
+	          <li id="listaContacto" class="nav-item mb-2"><i class="bi bi-geo-alt-fill"></i><a href="#" class="nav-link p-0 text-muted">Mapa</a></li>
+	        </ul>
+	      </div>
+	
+	      <div class="col-6 col-md-2 mb-3">
+	        <h5 style="text-align:center;">Redes sociales</h5>
+	        <ul class="nav flex-column">
+	          <li id="listaRedSocial" class="nav-item mb-2"><i class="bi bi-twitter"></i><a id="iconoRedSocial" href="#" class="nav-link p-0 text-muted">Twitter</a></li>
+	          <li id="listaRedSocial" class="nav-item mb-2"><i class="bi bi-instagram"></i><a id="iconoRedSocial" href="#" class="nav-link p-0 text-muted">Instagram</a></li>
+	          <li id="listaRedSocial" class="nav-item mb-2"><i class="bi bi-facebook"></i><a id="iconoRedSocial" href="#" class="nav-link p-0 text-muted">Facebook</a></li>
+	          <li id="listaRedSocial" class="nav-item mb-2"><i class="bi bi-youtube"></i><a id="iconoRedSocial" href="#" class="nav-link p-0 text-muted">Youtube</a></li>
+	        </ul>
+	      </div>
+	
+	      <div class="col-6 col-md-2 mb-3">
+	        <h5 style="text-align:center;">Mapa web</h5>
+	        <ul class="nav flex-column">
+	          <li class="nav-item mb-2"><a href="index.jsp" class="nav-link p-0 text-muted" style="text-align:center;">Inicio</a></li>
+	<!--           <li class="nav-item mb-2"><a id="registrarme" href="#" class="nav-link p-0 text-muted">Registrarse</a></li> -->
+	<!--           <li class="nav-item mb-2"><a id="carrito" href="#" class="nav-link p-0 text-muted">Carrito</a></li> -->
+	<!--           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li> -->
+	<!--           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Nosotros</a></li> -->
+	        </ul>
+	      </div>
+	
+	      <div class="col-md-5 offset-md-1 mb-3" id="seccionFooter">
+	        <form>
+	          <h5>Suscribite a nuestro newsletter</h5>
+	          <p>Consigue todas las novedades mensuales y descuentos</p>
+	          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+	            <label for="newsletter1" class="visually-hidden">Email</label>
+	            <input id="newsletter1" type="text" class="form-control" placeholder="Email">
+	            <button class="btn btn-primary" type="button">Suscribirse</button>
+	          </div>
+	        </form>
+	      </div>
+	    </div>
+	
+	    <div id="contenedorCopyRight" class="d-flex flex-column flex-sm-row justify-content-center py-4 my-4 border-top">
+	      <p>© 2022 Carlos Fernández Lobo</p>
+	    </div>
+	  </footer>
+ </div>
+
+</html>

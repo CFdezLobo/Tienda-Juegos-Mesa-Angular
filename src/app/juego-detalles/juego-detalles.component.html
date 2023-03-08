@@ -1,0 +1,73 @@
+<!-- {{mensaje}} -->
+
+<div style="text-align: center; margin-top: 1rem;">
+	<h1>Detalles</h1>
+</div>
+
+<div class="container mt-5 mb-5" style="margin-top:6rem!important;">
+	<div class="card detallesProducto">
+		<div class="row g-0">
+			<div class="col-md-6 border-end">
+				<div class="d-flex flex-column justify-content-center" style="    height: 100%;">
+					<div class="main_image" style="border-bottom: 1px solid rgba(0,0,0,.125); display: flex; justify-content: center;align-items: center;
+					height: 100%;">
+						<img id="main_product_image" src="server/imagenes/{{juego.id}}-{{numeroImagen}}.jpg" width="350"/>
+					</div>
+					<div class="thumbnail_images">
+						<ul id="thumbnail" style="padding-left:0; list-style: none;display: flex; justify-content: space-evenly; width:100%;    height: 100%;
+						align-items: center;">
+							<li>
+								<img style="height: 120px;" src="server/imagenes/{{juego.id}}-1.jpg" (click)="changeImage(1)" width="120"/>
+							</li>
+							<li>
+								<img style="height: 120px;" src="server/imagenes/{{juego.id}}-2.jpg" (click)="changeImage(2)" width="120"/>
+							</li>
+							<li>
+								<img style="height: 120px;" src="server/imagenes/{{juego.id}}-3.jpg" (click)="changeImage(3)" width="120"/>
+							</li>
+							<li>
+								<img style="height: 120px;" src="server/imagenes/{{juego.id}}-4.jpg" (click)="changeImage(4)" width="120"/>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="p-3 right-side">
+					<div class="d-flex justify-content-between align-items-center">
+						<h3 style="margin-top:1rem;">{{juego.nombre}}</h3>
+						<span class="heart"><i class='bx bx-heart'></i></span>
+					</div>
+					<div class="mt-2 pr-3 content" style="text-align: justify;">
+						<p>{{juego.descripcion}}</p>
+					</div>
+					<h3 id="precio" style="margin-top:1.5rem;font-size: 2rem; color: #0d6efd;">{{juego.precio}} €</h3>
+					<div class="mt-5" style="text-align:start;margin-top:1rem!important;">
+						<span class="fw-bold"> Especificaciones: </span>
+						<ul class="list-group list-group-flush" style="margin-top:1rem;">
+							<li class="list-group-item">
+								<span id="tituloEspecificacion">Jugadores:</span> {{juego.n_jugadores}} jugadores							
+							</li>
+							<li class="list-group-item">
+								<span id="tituloEspecificacion">Duracion:</span> {{juego.duracion}} min
+							</li>
+							<li class="list-group-item">
+								<span id="tituloEspecificacion">Dificultad:</span> {{juego.dificultad}}
+							</li>
+							<li class="list-group-item">
+								<span id="tituloEspecificacion">Categoria:</span> {{juego.categoria}}
+							</li>
+							<li class="list-group-item">
+								<span id="tituloEspecificacion">Idioma:</span> {{juego.idioma}}
+							</li>
+						</ul>
+					</div>
+					<div class="buttons d-flex flex-row mt-5 gap-3" style="display:flex;justify-content:center;align-items:center;margin-top:1rem!important">
+						<input type="number" [(ngModel)]="cantidad" value="1" min="1" style="width: 3em; margin: 10px;" /> 
+						<button (click)="agregar_producto_al_carrito()" class="btn btn-primary">AGREGAR AL CARRITO</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

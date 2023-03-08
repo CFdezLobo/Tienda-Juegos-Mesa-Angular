@@ -1,0 +1,37 @@
+<div style="text-align: center; margin: 1rem;">
+	<h1>Carrito</h1>
+</div>
+
+<div class="row row-cols-5 gx-0" style="justify-content:center;">
+
+<div class="card col" style="margin: 1rem; cursor:pointer;" *ngFor="let pc of juegosCarrito">
+	<div class="enlace_detalles" style="display: flex;justify-content:center; margin-top: 2rem;">
+        <img src="server/imagenes/{{pc.juego.id}}-1.jpg" height="200" alt="">
+		</div>
+		<div class="enlace_detalles card-body">
+			<h4 class="card-title" style="text-align:center;">{{pc.juego.nombre}} </h4>
+			<h5 id="precio" class="card-title" style="text-align:center;color: #0d6efd;">{{pc.juego.precio}} €</h5>
+		</div>
+			<ul class="list-group list-group-flush" style="text-align: start; padding: 1rem;">
+				<li class="list-group-item"> <span id="tituloEspecificacion" style="font-weight: 600;"> Jugadores: </span> {{pc.juego.n_jugadores}} jugadores </li>
+				<li class="list-group-item"> <span id="tituloEspecificacion" style="font-weight: 600;"> Duracion: </span> {{pc.juego.duracion}} min.</li>
+				<li class="list-group-item"> <span id="tituloEspecificacion" style="font-weight: 600;"> Dificultad: </span> {{pc.juego.dificultad}} </li>
+				<li class="list-group-item"> <span id="tituloEspecificacion" style="font-weight: 600;"> Categoria: </span> {{pc.juego.categoria}} </li>
+				<li class="list-group-item"> <span id="tituloEspecificacion" style="font-weight: 600;"> Idioma: </span> {{pc.juego.idioma}} </li>
+				<li class="list-group-item"> <span id="tituloEspecificacion" style="font-weight: 600;"> Cantidad: </span>
+					<input type="number" class="input_cantidad" value="{{pc.cantidad}}" min="1" style="width:3em;text-align: center;"/>
+				</li>
+			</ul>
+		<!-- <div style="text-align:center; padding: 1.5rem;">
+			 <a href="#" class="enlace_borrar_producto btn btn-primary" routerLink="/carrito">
+            	Borrar producto
+        	</a>
+		</div> -->
+</div>
+
+</div>
+
+<div style="text-align: center;margin: 30px;font-size: 1.5em;">
+    <button (click)="vaciarCarrito()" class="btn btn-primary" style="margin-right: 1.5rem;">VACIAR CARRITO</button>
+    <button (click)="realizarPedido()" class="btn btn-primary">REALIZAR PEDIDO</button> 
+</div>

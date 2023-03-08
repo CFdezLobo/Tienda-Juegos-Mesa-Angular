@@ -1,0 +1,27 @@
+<div style="text-align: center; margin-top: 1rem;">
+    <h1>Juegos</h1>
+</div>
+
+<div id="productos_listado" style="display: flex; justify-content:center;" class="row row-cols-4 gx-0">
+    <div class="card col" style="margin: 1rem;display: flex;justify-content: center;align-items: center;" *ngFor="let j of juegos">
+
+        <!-- Nombre: {{j.nombre}} <br>
+        Precio: {{j.precio}} €<br>
+        Categoria: {{j.categoria}} <br>
+        Duración: {{j.duracion}} min.<br>
+        Dificultad: {{j.dificultad}} <br>
+        Nº de jugadores: {{j.n_jugadores}} jugadores<br>
+        Idioma: {{j.idioma}} <br> -->
+
+        <div class="enlace_detalles card-body">
+			<h3 class="card-title" style="text-align:center;margin:1rem;">{{j.nombre}}</h3>
+            <img src="server/imagenes/{{j.id}}-1.jpg" height="200" width="250" alt="" style="justify-content: center;margin-top: 1rem;"/>
+			<h4 id="precio" class="card-title" style="text-align:center;margin-top: 2rem;color: #0d6efd;">{{j.precio}} €</h4>
+		</div>
+    
+        <button (click)="verDetalles(j)" class="enlace_comprar btn btn-primary" style="margin:20px;">VER DETALLES</button>
+
+    </div>
+</div>
+
+
